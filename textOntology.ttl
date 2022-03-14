@@ -1,0 +1,257 @@
+@prefix co: <http://purl.org/co/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dhplusXml: <https://dh.plus.ac.at/xml-ontology#> .
+@prefix mhdbdbxml: <https://mhdbdbd.plus.ac.at/xml-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://dh.plus.ac.at/xml-ontology> a owl:Ontology ;
+    rdfs:label "dhPLUS XML Ontologie"@de,
+        "dhPLUS XML Ontology"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dc:rights <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dc:title "dhPLUS XML Ontologie"@de,
+        "dhPLUS XML Ontology"@en ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    owl:imports co: ;
+    owl:ontologyIRI dhplusXml: ;
+    owl:versionIRI <https://dh.plus.ac.at/xml-ontology/0-1#> ;
+    owl:versionInfo "2022-02-23"^^xsd:date,
+        "0.1"^^xsd:string ;
+    skos:definition "Diese Ontologie spezifiziert die TEI-zu-RDF-Serialisierung, die in MHDBDB verwendet wird."@de,
+        "This ontology specifies the TEI to RDF serialization used in MHDBDB."@en .
+
+mhdbdbxml:Comment a owl:Class ;
+    rdfs:label "Comment"@de,
+        "Comment"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:subClassOf mhdbdbxml:Node ;
+    skos:definition "Klasse des XML-Comments."@de,
+        "Class for XML Comment."@en .
+
+mhdbdbxml:attribute a owl:ObjectProperty ;
+    rdfs:label "hat Attribut"@de,
+        "has attribute"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Attribute ;
+    skos:definition "Identifiziert Attribut."@de,
+        "Identifies the attribut."@en .
+
+mhdbdbxml:content a owl:DatatypeProperty ;
+    rdfs:label "Inhalt"@de,
+        "Content"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Text ;
+    rdfs:range xsd:string ;
+    skos:definition "Inhalt eines Text-Knotens."@de,
+        "Content of a text node."@en .
+
+mhdbdbxml:firstChild a owl:ObjectProperty ;
+    rdfs:label "hat ersten Kind-Knoten"@de,
+        "has firstChild node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:firstItem,
+        mhdbdbxml:child ;
+    skos:definition "Identifiziert den ersten Kind-Knoten."@de,
+        "Identifies the firstChild node."@en .
+
+mhdbdbxml:index a owl:DatatypeProperty ;
+    rdfs:label "index"@de,
+        "index"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf co:index ;
+    skos:definition "Index-Position des Knotens in der Liste."@de,
+        "Index position of node in list."@en .
+
+mhdbdbxml:lastChild a owl:ObjectProperty ;
+    rdfs:label "hat letzten Kind-Knoten"@de,
+        "has lastChild node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:lastItem,
+        mhdbdbxml:child ;
+    skos:definition "Identifiziert den letzten Kind-Knoten."@de,
+        "Identifies the lastChild node."@en .
+
+mhdbdbxml:n a owl:DatatypeProperty ;
+    rdfs:label "n"@de,
+        "n"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-28" ;
+    dcterms:modified "2022-02-28+13:47" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range xsd:integer ;
+    skos:definition "Nummer des Elements im XML Baum."@de,
+        "Number of element in xml tree."@en .
+
+mhdbdbxml:name a owl:DatatypeProperty ;
+    rdfs:domain owl:unionOf .
+
+mhdbdbxml:nameSpace a owl:DatatypeProperty ;
+    rdfs:domain owl:unionOf .
+
+mhdbdbxml:partOf a owl:ObjectProperty ;
+    rdfs:label "Teil eines Dokuments"@de,
+        "part of document"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Document ;
+    skos:definition "Identifiziert das Dokument des Knotens."@de,
+        "Identifies document of the node."@en .
+
+mhdbdbxml:root a owl:ObjectProperty ;
+    rdfs:label "hat Wurzelelement"@de,
+        "has root element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Document ;
+    rdfs:range mhdbdbxml:Element ;
+    skos:definition "Identifiziert das Wurzelelement eines Dokuments."@de,
+        "Identifies the root element of a document."@en .
+
+mhdbdbxml:value a owl:DatatypeProperty ;
+    rdfs:label "xml attribute value"@de,
+        "xml attribute value"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Attribute ;
+    rdfs:range xsd:string ;
+    skos:definition "xml attribute value."@de,
+        "xml attribute value."@en .
+
+mhdbdbxml:xmlSource a owl:DatatypeProperty ;
+    rdfs:label "xml source"@de,
+        "xml source"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-28+13:47" ;
+    rdfs:domain mhdbdbxml:Document ;
+    rdfs:range xsd:string ;
+    skos:definition "xml source."@de,
+        "xml source."@en .
+
+mhdbdbxml:Text a owl:Class ;
+    rdfs:label "Text"@de,
+        "Text"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:subClassOf mhdbdbxml:Node ;
+    skos:definition "Klasse des XML-Texts."@de,
+        "Class for XML Text."@en .
+
+mhdbdbxml:nextSibling a owl:ObjectProperty ;
+    rdfs:label "hat nächsten Knoten"@de,
+        "has next node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:nextItem ;
+    owl:inverseOf mhdbdbxml:prevSibling ;
+    skos:definition "Identifiziert den nächsten Knoten."@de,
+        "Identifies the next node."@en .
+
+mhdbdbxml:parent a owl:ObjectProperty ;
+    rdfs:label "hat Eltern-Knoten"@de,
+        "has parent element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "2022-02-28+13:47" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Element ;
+    skos:definition "Identifiziert den Elternknoten."@de,
+        "Identifies the parent node."@en .
+
+mhdbdbxml:prevSibling a owl:ObjectProperty ;
+    rdfs:label "hat vorhergehenden Knoten"@de,
+        "has previous node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:previousItem ;
+    owl:inverseOf mhdbdbxml:nextSibling ;
+    skos:definition "Identifiziert den vorhergehenden Knoten."@de,
+        "Identifies the previous node."@en .
+
+mhdbdbxml:Attribute a owl:Class ;
+    rdfs:label "Attribute"@de,
+        "Attribute"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    skos:definition "Klasse des XML-Attributes."@de,
+        "Class for XML Attribute."@en .
+
+mhdbdbxml:child a owl:ObjectProperty ;
+    rdfs:label "hat Kind-Knoten"@de,
+        "has child element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:item ;
+    owl:inverseOf mhdbdbxml:parent ;
+    skos:definition "Identifiziert den Kind-Knoten."@de,
+        "Identifies the child node."@en .
+
+mhdbdbxml:Document a owl:Class ;
+    rdfs:label "Dokument"@de,
+        "Document"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    skos:definition "Klasse des XML-Dokument."@de,
+        "Class for XML Document."@en .
+
+mhdbdbxml:Element a owl:Class ;
+    rdfs:label "Element"@de,
+        "Element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:subClassOf mhdbdbxml:Node ;
+    skos:definition "Klasse des XML-Elements."@de,
+        "Class for XML Element."@en .
+
+mhdbdbxml:Node a owl:Class ;
+    rdfs:label "Knoten"@de,
+        "Node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:subClassOf co:List,
+        co:ListItem ;
+    skos:definition "Klasse des XML-Knoten."@de,
+        "Class for XML Node."@en .
+

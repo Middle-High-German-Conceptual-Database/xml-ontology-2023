@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://dh.plus.ac.at/xml-ontology#"
+     xml:base="https://dh.plus.ac.at/xml-ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://dh.plus.ac.at/xml-ontology">
+        <owl:versionIRI rdf:resource="https://dh.plus.ac.at/xml-ontology/0-1#"/>
+        <owl:imports rdf:resource="http://purl.org/co/"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <dc:rights rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:title xml:lang="de">dhPLUS XML Ontologie</dc:title>
+        <dc:title xml:lang="en">dhPLUS XML Ontology</dc:title>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="de">dhPLUS XML Ontologie</rdfs:label>
+        <rdfs:label xml:lang="en">dhPLUS XML Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-02-23</owl:versionInfo>
+        <owl:versionInfo>0.1</owl:versionInfo>
+        <skos:definition xml:lang="de">Diese Ontologie spezifiziert die TEI-zu-RDF-Serialisierung, die in MHDBDB verwendet wird.</skos:definition>
+        <skos:definition xml:lang="en">This ontology specifies the TEI to RDF serialization used in MHDBDB.</skos:definition>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/co/firstItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/firstItem"/>
+    
+
+
+    <!-- http://purl.org/co/item -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/item"/>
+    
+
+
+    <!-- http://purl.org/co/lastItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/lastItem"/>
+    
+
+
+    <!-- http://purl.org/co/nextItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/nextItem"/>
+    
+
+
+    <!-- http://purl.org/co/previousItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/previousItem"/>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#attribute -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#attribute">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Element"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="en">has attribute</rdfs:label>
+        <rdfs:label xml:lang="de">hat Attribut</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the attribut.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert Attribut.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#child -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#child">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/co/item"/>
+        <owl:inverseOf rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#parent"/>
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Element"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-25</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="en">has child element</rdfs:label>
+        <rdfs:label xml:lang="de">hat Kind-Knoten</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the child node.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert den Kind-Knoten.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#firstChild -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#firstChild">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/co/firstItem"/>
+        <rdfs:subPropertyOf rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#child"/>
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Element"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="en">has firstChild node</rdfs:label>
+        <rdfs:label xml:lang="de">hat ersten Kind-Knoten</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the firstChild node.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert den ersten Kind-Knoten.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#lastChild -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#lastChild">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/co/lastItem"/>
+        <rdfs:subPropertyOf rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#child"/>
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Element"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-24</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="en">has lastChild node</rdfs:label>
+        <rdfs:label xml:lang="de">hat letzten Kind-Knoten</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the lastChild node.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert den letzten Kind-Knoten.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/co/nextItem"/>
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="en">has next node</rdfs:label>
+        <rdfs:label xml:lang="de">hat nächsten Knoten</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the next node.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert den nächsten Knoten.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#parent -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#parent">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Element"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-25</terms:created>
+        <terms:modified>2022-02-28+13:47</terms:modified>
+        <rdfs:label xml:lang="en">has parent element</rdfs:label>
+        <rdfs:label xml:lang="de">hat Eltern-Knoten</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the parent node.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert den Elternknoten.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#partOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#partOf">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Document"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-25</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="de">Teil eines Dokuments</rdfs:label>
+        <rdfs:label xml:lang="en">part of document</rdfs:label>
+        <skos:definition xml:lang="en">Identifies document of the node.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert das Dokument des Knotens.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/co/previousItem"/>
+        <owl:inverseOf rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling"/>
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-24</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="en">has previous node</rdfs:label>
+        <rdfs:label xml:lang="de">hat vorhergehenden Knoten</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the previous node.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert den vorhergehenden Knoten.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#root -->
+
+
+    <owl:ObjectProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#root">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Document"/>
+        <rdfs:range rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Element"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="en">has root element</rdfs:label>
+        <rdfs:label xml:lang="de">hat Wurzelelement</rdfs:label>
+        <skos:definition xml:lang="en">Identifies the root element of a document.</skos:definition>
+        <skos:definition xml:lang="de">Identifiziert das Wurzelelement eines Dokuments.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/co/index -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/co/index"/>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#content -->
+
+
+    <owl:DatatypeProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#content">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Text"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="en">Content</rdfs:label>
+        <rdfs:label xml:lang="de">Inhalt</rdfs:label>
+        <skos:definition xml:lang="en">Content of a text node.</skos:definition>
+        <skos:definition xml:lang="de">Inhalt eines Text-Knotens.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#index -->
+
+
+    <owl:DatatypeProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#index">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/co/index"/>
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-24</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="de">index</rdfs:label>
+        <rdfs:label xml:lang="en">index</rdfs:label>
+        <skos:definition xml:lang="en">Index position of node in list.</skos:definition>
+        <skos:definition xml:lang="de">Index-Position des Knotens in der Liste.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#n -->
+
+
+    <owl:DatatypeProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#n">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Element"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-28</terms:created>
+        <terms:modified>2022-02-28+13:47</terms:modified>
+        <rdfs:label xml:lang="de">n</rdfs:label>
+        <rdfs:label xml:lang="en">n</rdfs:label>
+        <skos:definition xml:lang="en">Number of element in xml tree.</skos:definition>
+        <skos:definition xml:lang="de">Nummer des Elements im XML Baum.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#unionOf"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace -->
+
+
+    <owl:DatatypeProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#unionOf"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#value -->
+
+
+    <owl:DatatypeProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#value">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="de">xml attribute value</rdfs:label>
+        <rdfs:label xml:lang="en">xml attribute value</rdfs:label>
+        <skos:definition xml:lang="de">xml attribute value.</skos:definition>
+        <skos:definition xml:lang="en">xml attribute value.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource -->
+
+
+    <owl:DatatypeProperty rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource">
+        <rdfs:domain rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-28+13:47</terms:modified>
+        <rdfs:label xml:lang="de">xml source</rdfs:label>
+        <rdfs:label xml:lang="en">xml source</rdfs:label>
+        <skos:definition xml:lang="de">xml source.</skos:definition>
+        <skos:definition xml:lang="en">xml source.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/co/List -->
+
+
+    <owl:Class rdf:about="http://purl.org/co/List"/>
+    
+
+
+    <!-- http://purl.org/co/ListItem -->
+
+
+    <owl:Class rdf:about="http://purl.org/co/ListItem"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#unionOf -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#unionOf"/>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#Attribute -->
+
+
+    <owl:Class rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="de">Attribute</rdfs:label>
+        <rdfs:label xml:lang="en">Attribute</rdfs:label>
+        <skos:definition xml:lang="en">Class for XML Attribute.</skos:definition>
+        <skos:definition xml:lang="de">Klasse des XML-Attributes.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#Comment -->
+
+
+    <owl:Class rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#Comment">
+        <rdfs:subClassOf rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="de">Comment</rdfs:label>
+        <rdfs:label xml:lang="en">Comment</rdfs:label>
+        <skos:definition xml:lang="en">Class for XML Comment.</skos:definition>
+        <skos:definition xml:lang="de">Klasse des XML-Comments.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#Document -->
+
+
+    <owl:Class rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#Document">
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+        <rdfs:label xml:lang="de">Dokument</rdfs:label>
+        <skos:definition xml:lang="en">Class for XML Document.</skos:definition>
+        <skos:definition xml:lang="de">Klasse des XML-Dokument.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#Element -->
+
+
+    <owl:Class rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#Element">
+        <rdfs:subClassOf rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="de">Element</rdfs:label>
+        <rdfs:label xml:lang="en">Element</rdfs:label>
+        <skos:definition xml:lang="en">Class for XML Element.</skos:definition>
+        <skos:definition xml:lang="de">Klasse des XML-Elements.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#Node -->
+
+
+    <owl:Class rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#Node">
+        <rdfs:subClassOf rdf:resource="http://purl.org/co/List"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/co/ListItem"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-03-14+15:41</terms:modified>
+        <rdfs:label xml:lang="de">Knoten</rdfs:label>
+        <rdfs:label xml:lang="en">Node</rdfs:label>
+        <skos:definition xml:lang="en">Class for XML Node.</skos:definition>
+        <skos:definition xml:lang="de">Klasse des XML-Knoten.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://mhdbdbd.plus.ac.at/xml-ontology#Text -->
+
+
+    <owl:Class rdf:about="https://mhdbdbd.plus.ac.at/xml-ontology#Text">
+        <rdfs:subClassOf rdf:resource="https://mhdbdbd.plus.ac.at/xml-ontology#Node"/>
+        <dc:creator>Peter Hinkelmanns</dc:creator>
+        <terms:created>2022-02-23</terms:created>
+        <terms:modified>2022-02-25+16:19</terms:modified>
+        <rdfs:label xml:lang="de">Text</rdfs:label>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+        <skos:definition xml:lang="en">Class for XML Text.</skos:definition>
+        <skos:definition xml:lang="de">Klasse des XML-Texts.</skos:definition>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

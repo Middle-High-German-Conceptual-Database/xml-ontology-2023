@@ -1,0 +1,752 @@
+[ {
+  "@id" : "http://purl.org/co/List",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/co/ListItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/co/firstItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/co/index",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/co/item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/co/lastItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/co/nextItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/co/previousItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#unionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://dh.plus.ac.at/xml-ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/elements/1.1/rights" : [ {
+    "@id" : "https://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "de",
+    "@value" : "dhPLUS XML Ontologie"
+  }, {
+    "@language" : "en",
+    "@value" : "dhPLUS XML Ontology"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "dhPLUS XML Ontologie"
+  }, {
+    "@language" : "en",
+    "@value" : "dhPLUS XML Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.org/co/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://dh.plus.ac.at/xml-ontology/0-1#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-02-23"
+  }, {
+    "@value" : "0.1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Diese Ontologie spezifiziert die TEI-zu-RDF-Serialisierung, die in MHDBDB verwendet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "This ontology specifies the TEI to RDF serialization used in MHDBDB."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Attribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Attribute"
+  }, {
+    "@language" : "en",
+    "@value" : "Attribute"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class for XML Attribute."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse des XML-Attributes."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Comment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Comment"
+  }, {
+    "@language" : "en",
+    "@value" : "Comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class for XML Comment."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse des XML-Comments."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Document",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Document"
+  }, {
+    "@language" : "de",
+    "@value" : "Dokument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class for XML Document."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse des XML-Dokument."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Element"
+  }, {
+    "@language" : "en",
+    "@value" : "Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class for XML Element."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse des XML-Elements."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Knoten"
+  }, {
+    "@language" : "en",
+    "@value" : "Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/co/List"
+  }, {
+    "@id" : "http://purl.org/co/ListItem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class for XML Node."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse des XML-Knoten."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Text",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Text"
+  }, {
+    "@language" : "en",
+    "@value" : "Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Class for XML Text."
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse des XML-Texts."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#attribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has attribute"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Attribut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the attribut."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert Attribut."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#child",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-25"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has child element"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Kind-Knoten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/co/item"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#parent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the child node."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert den Kind-Knoten."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#content",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Content"
+  }, {
+    "@language" : "de",
+    "@value" : "Inhalt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Content of a text node."
+  }, {
+    "@language" : "de",
+    "@value" : "Inhalt eines Text-Knotens."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#firstChild",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has firstChild node"
+  }, {
+    "@language" : "de",
+    "@value" : "hat ersten Kind-Knoten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/co/firstItem"
+  }, {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#child"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the firstChild node."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert den ersten Kind-Knoten."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#index",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-24"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "index"
+  }, {
+    "@language" : "en",
+    "@value" : "index"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/co/index"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Index position of node in list."
+  }, {
+    "@language" : "de",
+    "@value" : "Index-Position des Knotens in der Liste."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#lastChild",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-24"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has lastChild node"
+  }, {
+    "@language" : "de",
+    "@value" : "hat letzten Kind-Knoten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/co/lastItem"
+  }, {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#child"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the lastChild node."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert den letzten Kind-Knoten."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#n",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-28"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-28+13:47"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "n"
+  }, {
+    "@language" : "en",
+    "@value" : "n"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Number of element in xml tree."
+  }, {
+    "@language" : "de",
+    "@value" : "Nummer des Elements im XML Baum."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#unionOf"
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#unionOf"
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has next node"
+  }, {
+    "@language" : "de",
+    "@value" : "hat nächsten Knoten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/co/nextItem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the next node."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert den nächsten Knoten."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#parent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-25"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-28+13:47"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has parent element"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Eltern-Knoten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the parent node."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert den Elternknoten."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#partOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-25"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Teil eines Dokuments"
+  }, {
+    "@language" : "en",
+    "@value" : "part of document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Document"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies document of the node."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert das Dokument des Knotens."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-24"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-03-14+15:41"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has previous node"
+  }, {
+    "@language" : "de",
+    "@value" : "hat vorhergehenden Knoten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/co/previousItem"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the previous node."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert den vorhergehenden Knoten."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#root",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has root element"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Wurzelelement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Element"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the root element of a document."
+  }, {
+    "@language" : "de",
+    "@value" : "Identifiziert das Wurzelelement eines Dokuments."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-25+16:19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "xml attribute value"
+  }, {
+    "@language" : "en",
+    "@value" : "xml attribute value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "xml attribute value."
+  }, {
+    "@language" : "en",
+    "@value" : "xml attribute value."
+  } ]
+}, {
+  "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Peter Hinkelmanns"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-02-23"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2022-02-28+13:47"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://mhdbdbd.plus.ac.at/xml-ontology#Document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "xml source"
+  }, {
+    "@language" : "en",
+    "@value" : "xml source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "xml source."
+  }, {
+    "@language" : "en",
+    "@value" : "xml source."
+  } ]
+} ]

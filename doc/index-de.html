@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>dhPLUS XML Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://dh.plus.ac.at/xml-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://dh.plus.ac.at/xml-ontology","name":"dhPLUS XML Ontology", "headline":"Document describing the ontology https://dh.plus.ac.at/xml-ontology", "datePublished":"2022-03-14+15:41", "version":"0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Peter Hinkelmanns"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>dhPLUS XML Ontology</h1>
+<h2>Release  2022-03-14+15:41</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://dh.plus.ac.at/xml-ontology/0-1#">https://dh.plus.ac.at/xml-ontology/0-1#</a></dd>
+<dt>Revision:</dt>
+<dd>0.1</dd>
+<dt>Authors:</dt>
+<dd>Peter Hinkelmanns</dd>
+
+<dt>License: </dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/publicdomain/zero/1.0/-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Peter Hinkelmanns. dhPLUS XML Ontology. Revision: 0.1. Retrieved from: https://dh.plus.ac.at/xml-ontology/0-1#</dd>
+</dl>
+
+<a href="provenance/provenance-de.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a place holder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">dhPLUS XML Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute">Attribute</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Comment" title="https://mhdbdbd.plus.ac.at/xml-ontology#Comment">Comment</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Document" title="https://mhdbdbd.plus.ac.at/xml-ontology#Document">Dokument</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Text" title="https://mhdbdbd.plus.ac.at/xml-ontology#Text">Text</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#attribute"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#attribute">hat Attribut</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#parent" title="https://mhdbdbd.plus.ac.at/xml-ontology#parent">hat Eltern-Knoten</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#firstChild"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#firstChild">hat ersten Kind-Knoten</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#child" title="https://mhdbdbd.plus.ac.at/xml-ontology#child">hat Kind-Knoten</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#lastChild"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#lastChild">hat letzten Kind-Knoten</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling">hat nächsten Knoten</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling">hat vorhergehenden Knoten</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#root" title="https://mhdbdbd.plus.ac.at/xml-ontology#root">hat Wurzelelement</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#partOf" title="https://mhdbdbd.plus.ac.at/xml-ontology#partOf">Teil eines Dokuments</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#index" title="https://mhdbdbd.plus.ac.at/xml-ontology#index">index</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#content" title="https://mhdbdbd.plus.ac.at/xml-ontology#content">Inhalt</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#n" title="https://mhdbdbd.plus.ac.at/xml-ontology#n">n</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#name" title="https://mhdbdbd.plus.ac.at/xml-ontology#name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace">
+         <span>name space</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#value" title="https://mhdbdbd.plus.ac.at/xml-ontology#value">xml attribute value</a>
+   </li>
+   <li>
+      <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource"
+         title="https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource">xml source</a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">dhPLUS XML Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for dhPLUS XML Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by dhPLUS XML Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute">Attribute</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Comment" title="https://mhdbdbd.plus.ac.at/xml-ontology#Comment">Comment</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Document" title="https://mhdbdbd.plus.ac.at/xml-ontology#Document">Dokument</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Text" title="https://mhdbdbd.plus.ac.at/xml-ontology#Text">Text</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute">
+      <h3>Attribute<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#Attribute</p>
+      <div class="comment">
+         <span class="markdown">Klasse des XML-Attributes.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#value" title="https://mhdbdbd.plus.ac.at/xml-ontology#value">xml attribute value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#attribute"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#attribute">hat Attribut</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#Comment">
+      <h3>Comment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#Comment</p>
+      <div class="comment">
+         <span class="markdown">Klasse des XML-Comments.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#Document">
+      <h3>Dokument<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#Document</p>
+      <div class="comment">
+         <span class="markdown">Klasse des XML-Dokument.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#root" title="https://mhdbdbd.plus.ac.at/xml-ontology#root">hat Wurzelelement</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource">xml source</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#partOf" title="https://mhdbdbd.plus.ac.at/xml-ontology#partOf">Teil eines Dokuments</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#Element">
+      <h3>Element<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#Element</p>
+      <div class="comment">
+         <span class="markdown">Klasse des XML-Elements.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#attribute"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#attribute">hat Attribut</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#child" title="https://mhdbdbd.plus.ac.at/xml-ontology#child">hat Kind-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#firstChild"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#firstChild">hat ersten Kind-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#lastChild"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#lastChild">hat letzten Kind-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#n" title="https://mhdbdbd.plus.ac.at/xml-ontology#n">n</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#parent" title="https://mhdbdbd.plus.ac.at/xml-ontology#parent">hat Eltern-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#root" title="https://mhdbdbd.plus.ac.at/xml-ontology#root">hat Wurzelelement</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#Node">
+      <h3>Knoten<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#Node</p>
+      <div class="comment">
+         <span class="markdown">Klasse des XML-Knoten.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/co/List"
+               target="_blank"
+               title="http://purl.org/co/List">list</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/co/ListItem"
+               target="_blank"
+               title="http://purl.org/co/ListItem">list item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Comment" title="https://mhdbdbd.plus.ac.at/xml-ontology#Comment">Comment</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Text" title="https://mhdbdbd.plus.ac.at/xml-ontology#Text">Text</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#partOf" title="https://mhdbdbd.plus.ac.at/xml-ontology#partOf">Teil eines Dokuments</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#parent" title="https://mhdbdbd.plus.ac.at/xml-ontology#parent">hat Eltern-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling">hat nächsten Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling">hat vorhergehenden Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#index" title="https://mhdbdbd.plus.ac.at/xml-ontology#index">index</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#child" title="https://mhdbdbd.plus.ac.at/xml-ontology#child">hat Kind-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#firstChild"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#firstChild">hat ersten Kind-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#lastChild"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#lastChild">hat letzten Kind-Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling">hat nächsten Knoten</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling"
+               title="https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling">hat vorhergehenden Knoten</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#Text">
+      <h3>Text<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#Text</p>
+      <div class="comment">
+         <span class="markdown">Klasse des XML-Texts.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#content" title="https://mhdbdbd.plus.ac.at/xml-ontology#content">Inhalt</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#attribute"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#attribute">hat Attribut</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#parent" title="https://mhdbdbd.plus.ac.at/xml-ontology#parent">hat Eltern-Knoten</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#firstChild"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#firstChild">hat ersten Kind-Knoten</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#child" title="https://mhdbdbd.plus.ac.at/xml-ontology#child">hat Kind-Knoten</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#lastChild"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#lastChild">hat letzten Kind-Knoten</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling">hat nächsten Knoten</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling">hat vorhergehenden Knoten</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#root" title="https://mhdbdbd.plus.ac.at/xml-ontology#root">hat Wurzelelement</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#partOf" title="https://mhdbdbd.plus.ac.at/xml-ontology#partOf">Teil eines Dokuments</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#attribute">
+      <h3>hat Attribut<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#attribute</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert Attribut.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"
+                  title="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute">Attribute</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#parent">
+      <h3>hat Eltern-Knoten<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#parent</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert den Elternknoten.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#child" title="https://mhdbdbd.plus.ac.at/xml-ontology#child">hat Kind-Knoten</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#firstChild">
+      <h3>hat ersten Kind-Knoten<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#firstChild</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert den ersten Kind-Knoten.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://purl.org/co/firstItem"
+                  target="_blank"
+                  title="http://purl.org/co/firstItem">first item</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#child" title="https://mhdbdbd.plus.ac.at/xml-ontology#child">hat Kind-Knoten</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#child">
+      <h3>hat Kind-Knoten<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#child</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert den Kind-Knoten.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://purl.org/co/item"
+                  target="_blank"
+                  title="http://purl.org/co/item">item</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#firstChild"
+                  title="https://mhdbdbd.plus.ac.at/xml-ontology#firstChild">hat ersten Kind-Knoten</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#lastChild"
+                  title="https://mhdbdbd.plus.ac.at/xml-ontology#lastChild">hat letzten Kind-Knoten</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#parent" title="https://mhdbdbd.plus.ac.at/xml-ontology#parent">hat Eltern-Knoten</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#lastChild">
+      <h3>hat letzten Kind-Knoten<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#lastChild</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert den letzten Kind-Knoten.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#child" title="https://mhdbdbd.plus.ac.at/xml-ontology#child">hat Kind-Knoten</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/co/lastItem"
+                  target="_blank"
+                  title="http://purl.org/co/lastItem">last item</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling">
+      <h3>hat nächsten Knoten<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert den nächsten Knoten.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://purl.org/co/nextItem"
+                  target="_blank"
+                  title="http://purl.org/co/nextItem">next item</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling"
+                  title="https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling">hat vorhergehenden Knoten</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling">
+      <h3>hat vorhergehenden Knoten<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#prevSibling</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert den vorhergehenden Knoten.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://purl.org/co/previousItem"
+                  target="_blank"
+                  title="http://purl.org/co/previousItem">previous item</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling"
+                  title="https://mhdbdbd.plus.ac.at/xml-ontology#nextSibling">hat nächsten Knoten</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#root">
+      <h3>hat Wurzelelement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#root</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert das Wurzelelement eines Dokuments.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Document" title="https://mhdbdbd.plus.ac.at/xml-ontology#Document">Dokument</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#partOf">
+      <h3>Teil eines Dokuments<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#partOf</p>
+      <div class="comment">
+         <span class="markdown">Identifiziert das Dokument des Knotens.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Document" title="https://mhdbdbd.plus.ac.at/xml-ontology#Document">Dokument</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#index" title="https://mhdbdbd.plus.ac.at/xml-ontology#index">index</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#content" title="https://mhdbdbd.plus.ac.at/xml-ontology#content">Inhalt</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#n" title="https://mhdbdbd.plus.ac.at/xml-ontology#n">n</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#name" title="https://mhdbdbd.plus.ac.at/xml-ontology#name">
+            <span>name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace">
+            <span>name space</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#value" title="https://mhdbdbd.plus.ac.at/xml-ontology#value">xml attribute value</a>
+      </li>
+      <li>
+         <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource"
+            title="https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource">xml source</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#index">
+      <h3>index<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#index</p>
+      <div class="comment">
+         <span class="markdown">Index-Position des Knotens in der Liste.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://purl.org/co/index"
+                  target="_blank"
+                  title="http://purl.org/co/index">index</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Node" title="https://mhdbdbd.plus.ac.at/xml-ontology#Node">Knoten</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#content">
+      <h3>Inhalt<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#content</p>
+      <div class="comment">
+         <span class="markdown">Inhalt eines Text-Knotens.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Text" title="https://mhdbdbd.plus.ac.at/xml-ontology#Text">Text</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#n">
+      <h3>n<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#n</p>
+      <div class="comment">
+         <span class="markdown">Nummer des Elements im XML Baum.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Element" title="https://mhdbdbd.plus.ac.at/xml-ontology#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#name</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#unionOf"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#unionOf">union of</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace">
+      <h3>name space<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#nameSpace</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#unionOf"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#unionOf">union of</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#value">
+      <h3>xml attribute value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#value</p>
+      <div class="comment">
+         <span class="markdown">xml attribute value.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Attribute"
+                  title="https://mhdbdbd.plus.ac.at/xml-ontology#Attribute">Attribute</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource">
+      <h3>xml source<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://mhdbdbd.plus.ac.at/xml-ontology#xmlSource</p>
+      <div class="comment">
+         <span class="markdown">xml source.</span>
+      </div>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Peter Hinkelmanns</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://mhdbdbd.plus.ac.at/xml-ontology#Document" title="https://mhdbdbd.plus.ac.at/xml-ontology#Document">Dokument</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
