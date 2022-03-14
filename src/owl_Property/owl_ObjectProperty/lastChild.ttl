@@ -1,0 +1,15 @@
+mhdbdbxml:lastChild a owl:ObjectProperty ; 
+    rdfs:subPropertyOf mhdbdbxml:child ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:label
+        "has lastChild node"@en ,
+        "hat letzten Kind-Knoten"@de ;
+    skos:definition
+        "Identifies the lastChild node."@en ,
+        "Identifiziert den letzten Kind-Knoten."@de ;
+    rdfs:subPropertyOf co:lastItem ;    
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

@@ -1,0 +1,11 @@
+mhdbdbxml:Attribute a owl:Class ;    
+    rdfs:label
+        "Attribute"@en ,
+        "Attribute"@de ;   
+    skos:definition
+        "Class for XML Attribute."@en ,
+        "Klasse des XML-Attributes."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

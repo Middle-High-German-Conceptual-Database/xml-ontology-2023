@@ -1,0 +1,12 @@
+mhdbdbxml:Element a owl:Class ;    
+    rdfs:label
+        "Element"@en ,
+        "Element"@de ;
+    rdfs:subClassOf mhdbdbxml:Node ;    
+    skos:definition
+        "Class for XML Element."@en ,
+        "Klasse des XML-Elements."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

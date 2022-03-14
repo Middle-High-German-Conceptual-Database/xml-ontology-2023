@@ -1,0 +1,12 @@
+mhdbdbxml:Text a owl:Class ;    
+    rdfs:label
+        "Text"@en ,
+        "Text"@de ;
+    rdfs:subClassOf mhdbdbxml:Node ;    
+    skos:definition
+        "Class for XML Text."@en ,
+        "Klasse des XML-Texts."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

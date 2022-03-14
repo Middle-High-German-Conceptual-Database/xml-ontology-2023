@@ -1,0 +1,13 @@
+mhdbdbxml:content a owl:DatatypeProperty ;    
+    rdfs:domain mhdbdbxml:Text ;
+    rdfs:range xsd:string ;
+    rdfs:label
+        "Content"@en ,
+        "Inhalt"@de ;
+    skos:definition
+        "Content of a text node."@en ,
+        "Inhalt eines Text-Knotens."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

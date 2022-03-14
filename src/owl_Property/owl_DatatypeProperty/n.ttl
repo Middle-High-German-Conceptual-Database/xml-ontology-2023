@@ -1,0 +1,14 @@
+mhdbdbxml:n a owl:DatatypeProperty ;    
+    rdfs:domain  
+        mhdbdbxml:Element ;
+    rdfs:range xsd:integer ;
+    rdfs:label
+        "n"@en ,
+        "n"@de ;
+    skos:definition
+        "Number of element in xml tree."@en ,
+        "Nummer des Elements im XML Baum."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-28" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

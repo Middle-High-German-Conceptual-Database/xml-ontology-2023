@@ -1,0 +1,13 @@
+mhdbdbxml:nameSpace a owl:DatatypeProperty ;    
+    rdfs:domain owl:unionOf (mhdbdbxml:Element mhdbdbxml:Attribute);
+    rdfs:range xsd:anyUri ;
+    rdfs:label
+        "xml nameSpace"@en ,
+        "xml nameSpace"@de ;
+    skos:definition
+        "xml nameSpace."@en ,
+        "xml nameSpace."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

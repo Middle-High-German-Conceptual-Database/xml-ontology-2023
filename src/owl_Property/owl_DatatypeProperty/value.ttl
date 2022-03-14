@@ -1,0 +1,14 @@
+mhdbdbxml:value a owl:DatatypeProperty ;    
+    rdfs:domain  
+        mhdbdbxml:Attribute ;
+    rdfs:range xsd:string ;
+    rdfs:label
+        "xml attribute value"@en ,
+        "xml attribute value"@de ;
+    skos:definition
+        "xml attribute value."@en ,
+        "xml attribute value."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

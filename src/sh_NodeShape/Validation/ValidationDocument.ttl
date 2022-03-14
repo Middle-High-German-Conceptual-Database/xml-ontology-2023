@@ -1,0 +1,13 @@
+mhdbdbxml:ValidationDocument a sh:NodeShape ;
+    sh:target mhdbdbxml:Document ;
+    sh:property [
+            sh:path mhdbdbxml:root ;
+            sh:class mhdbdbxml:Node ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

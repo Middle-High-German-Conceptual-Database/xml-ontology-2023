@@ -1,0 +1,13 @@
+mhdbdbxml:partOf a owl:ObjectProperty ;    
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Document ;
+    rdfs:label
+        "part of document"@en ,
+        "Teil eines Dokuments"@de ;
+    skos:definition
+        "Identifies document of the node."@en ,
+        "Identifiziert das Dokument des Knotens."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

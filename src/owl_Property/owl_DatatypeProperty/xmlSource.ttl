@@ -1,0 +1,14 @@
+mhdbdbxml:xmlSource a owl:DatatypeProperty ;    
+    rdfs:domain  
+        mhdbdbxml:Document ;
+    rdfs:range xsd:string ;
+    rdfs:label
+        "xml source"@en ,
+        "xml source"@de ;
+    skos:definition
+        "xml source."@en ,
+        "xml source."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

@@ -1,0 +1,13 @@
+mhdbdbxml:name a owl:DatatypeProperty ;    
+    rdfs:domain owl:unionOf (mhdbdbxml:Element mhdbdbxml:Attribute);
+    rdfs:range xsd:string ;
+    rdfs:label
+        "xml name"@en ,
+        "xml name"@de ;
+    skos:definition
+        "xml name."@en ,
+        "xml name."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

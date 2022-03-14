@@ -1,0 +1,11 @@
+mhdbdbxml:Document a owl:Class ;    
+    rdfs:label
+        "Document"@en ,
+        "Dokument"@de ;
+    skos:definition
+        "Class for XML Document."@en ,
+        "Klasse des XML-Dokument."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.
