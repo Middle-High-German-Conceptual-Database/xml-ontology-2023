@@ -1,0 +1,467 @@
+@prefix co: <http://purl.org/co/> .
+@prefix constants: <https://dh.plus.ac.at/constants/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dhplusXml: <https://dh.plus.ac.at/xml-ontology#> .
+@prefix mhdbdbxml: <https://mhdbdbd.plus.ac.at/xml-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+constants:Prefixes sh:declare [ sh:namespace "http://www.wikidata.org/prop/direct-normalized/" ;
+            sh:prefix "wdtn" ],
+        [ sh:namespace "http://www.w3.org/ns/oa#" ;
+            sh:prefix "oa" ],
+        [ sh:namespace "http://www.w3.org/ns/lemon/decomp#" ;
+            sh:prefix "decomp" ],
+        [ sh:namespace "http://www.cidoc-crm.org/cidoc-crm/" ;
+            sh:prefix "crm" ],
+        [ sh:namespace "http://www.w3.org/2001/XMLSchema#" ;
+            sh:prefix "xsd" ],
+        [ sh:namespace "http://www.w3.org/2007/05/powder-s#" ;
+            sh:prefix "wdrs" ],
+        [ sh:namespace "http://www.w3.org/ns/lemon/ontolex#" ;
+            sh:prefix "ontolex" ],
+        [ sh:namespace "https://dh.plus.ac.at/vocabulary/" ;
+            sh:prefix "dhplusv" ],
+        [ sh:namespace "https://dh.plus.ac.at/mhdbdb/instance/" ;
+            sh:prefix "mhdbdbi" ],
+        [ sh:namespace "https://dh.plus.ac.at/mhdbdb/text/" ;
+            sh:prefix "mhdbdbtext" ],
+        [ sh:namespace "http://purl.org/co/" ;
+            sh:prefix "co" ],
+        [ sh:namespace "http://erlangen-crm.org/200717/" ;
+            sh:prefix "ecrm" ],
+        [ sh:namespace "https://d-nb.info/gnd/" ;
+            sh:prefix "gnd" ],
+        [ sh:namespace "http://id.loc.gov/ontologies/bibframe/" ;
+            sh:prefix "bf" ],
+        [ sh:namespace "http://www.w3.org/XML/1998/namespace" ;
+            sh:prefix "xml" ],
+        [ sh:namespace "http://www.lexinfo.net/ontology/3.0/lexinfo#" ;
+            sh:prefix "lexinfo" ],
+        [ sh:namespace "https://gams.uni-graz.at/o:szd.ontology#" ;
+            sh:prefix "szd" ],
+        [ sh:namespace "http://www.w3.org/2002/07/owl#" ;
+            sh:prefix "owl" ],
+        [ sh:namespace "http://www.w3.org/2006/time#" ;
+            sh:prefix "time" ],
+        [ sh:namespace "https://dh.plus.ac.at/xml-ontology#" ;
+            sh:prefix "dhplusXml" ],
+        [ sh:namespace "https://d-nb.info/" ;
+            sh:prefix "dnb" ],
+        [ sh:namespace "https://mhdbdbd.plus.ac.at/xml-ontology#" ;
+            sh:prefix "mhdbdbxml" ],
+        [ sh:namespace "http://xmlns.com/foaf/0.1/" ;
+            sh:prefix "foaf" ],
+        [ sh:namespace "https://dh.plus.ac.at/mhdbdb/ontology#" ;
+            sh:prefix "mhdbdbo" ],
+        [ sh:namespace "http://purl.org/dc/terms/" ;
+            sh:prefix "dcterms" ],
+        [ sh:namespace "http://purl.org/dc/elements/1.1/" ;
+            sh:prefix "dc" ],
+        [ sh:namespace "http://www.opengis.net/ont/geosparql#" ;
+            sh:prefix "geo" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://purl.org/vocab/vann/" ;
+            sh:prefix "vann" ],
+        [ sh:namespace "https://dh.plus.ac.at/constants/" ;
+            sh:prefix "constants" ],
+        [ sh:namespace "http://www.wikidata.org/entity/statement/" ;
+            sh:prefix "wds" ],
+        [ sh:namespace "http://www.opengis.net/ont/sf#" ;
+            sh:prefix "ogcsf" ],
+        [ sh:namespace "https://dh.plus.ac.at/instance/" ;
+            sh:prefix "dhplusi" ],
+        [ sh:namespace "http://id.loc.gov/ontologies/bflc/" ;
+            sh:prefix "bflc" ],
+        [ sh:namespace "http://www.opengis.net/ont/sf#" ;
+            sh:prefix "sf" ],
+        [ sh:namespace "https://dh.plus.ac.at/parameter-ontology#" ;
+            sh:prefix "parameter" ],
+        [ sh:namespace "https://dh.plus.ac.at/dhplusoValidation/" ;
+            sh:prefix "dhplusoValidation" ],
+        [ sh:namespace "http://www.w3.org/ns/shacl#" ;
+            sh:prefix "sh" ],
+        [ sh:namespace "https://dh.plus.ac.at/parameter/" ;
+            sh:prefix "parameteri" ],
+        [ sh:namespace "http://purl.org/dc/terms/" ;
+            sh:prefix "dct" ],
+        [ sh:namespace "http://www.w3.org/ns/lemon/lime#" ;
+            sh:prefix "lime" ],
+        [ sh:namespace "https://d-nb.info/standards/elementset/dnb#" ;
+            sh:prefix "dnbt" ],
+        [ sh:namespace "https://dh.plus.ac.at/tmp/" ;
+            sh:prefix "tmp" ],
+        [ sh:namespace "http://www.wikidata.org/prop/direct/" ;
+            sh:prefix "wdt" ],
+        [ sh:namespace "https://dh.plus.ac.at/ontology#" ;
+            sh:prefix "dhpluso" ],
+        [ sh:namespace "http://creativecommons.org/ns#" ;
+            sh:prefix "cc" ],
+        [ sh:namespace "http://schema.org/" ;
+            sh:prefix "schema" ],
+        [ sh:namespace "http://www.w3.org/2004/02/skos/core#" ;
+            sh:prefix "skos" ],
+        [ sh:namespace "https://d-nb.info/standards/elementset/gnd#" ;
+            sh:prefix "gndo" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#" ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://www.wikidata.org/entity/" ;
+            sh:prefix "wd" ] .
+
+<https://dh.plus.ac.at/xml-ontology> a owl:Ontology ;
+    rdfs:label "dhPLUS XML Ontologie"@de,
+        "dhPLUS XML Ontology"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dc:rights <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dc:title "dhPLUS XML Ontologie"@de,
+        "dhPLUS XML Ontology"@en ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    owl:imports co: ;
+    owl:ontologyIRI dhplusXml: ;
+    owl:versionIRI <https://dh.plus.ac.at/xml-ontology/0-1#> ;
+    owl:versionInfo "2022-02-23"^^xsd:date,
+        "0.1"^^xsd:string ;
+    skos:definition "Diese Ontologie spezifiziert die TEI-zu-RDF-Serialisierung, die in MHDBDB verwendet wird."@de,
+        "This ontology specifies the TEI to RDF serialization used in MHDBDB."@en .
+
+mhdbdbxml:ValidationAttribute a sh:NodeShape ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mhdbdbxml:name ;
+            sh:severity sh:Violation ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path mhdbdbxml:nameSpace ;
+            sh:severity sh:Violation ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mhdbdbxml:value ;
+            sh:severity sh:Violation ] ;
+    sh:target mhdbdbxml:Attribute .
+
+mhdbdbxml:ValidationComment a sh:NodeShape ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mhdbdbxml:value ;
+            sh:severity sh:Violation ] ;
+    sh:target mhdbdbxml:Comment .
+
+mhdbdbxml:ValidationDocument a sh:NodeShape ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    sh:property [ sh:class mhdbdbxml:Node ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mhdbdbxml:root ;
+            sh:severity sh:Violation ] ;
+    sh:target mhdbdbxml:Document .
+
+mhdbdbxml:ValidationElement a sh:NodeShape ;
+    sh:property [ sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:nextSibling,
+                mhdbdbxml:parent,
+                mhdbdbxml:prevSibling ;
+            sh:maxCount 1 ;
+            sh:path mhdbdbxml:firstChild ;
+            sh:severity sh:Violation ],
+        [ sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:nextSibling,
+                mhdbdbxml:parent,
+                mhdbdbxml:prevSibling ;
+            sh:maxCount 1 ;
+            sh:path mhdbdbxml:lastChild ;
+            sh:severity sh:Violation ],
+        [ sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:nextSibling,
+                mhdbdbxml:parent,
+                mhdbdbxml:prevSibling ;
+            sh:path mhdbdbxml:child ;
+            sh:severity sh:Violation ],
+        [ sh:class mhdbdbxml:attribute ;
+            sh:path mhdbdbxml:attribute ;
+            sh:severity sh:Violation ],
+        sh:path ;
+    sh:target mhdbdbxml:Element .
+
+mhdbdbxml:ValidationNode a sh:NodeShape ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-28+13:47" ;
+    sh:property [ sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:child,
+                mhdbdbxml:parent,
+                mhdbdbxml:prevSibling ;
+            sh:path mhdbdbxml:nextSibling ;
+            sh:severity sh:Violation ],
+        [ sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:child,
+                mhdbdbxml:nextSibling,
+                mhdbdbxml:parent ;
+            sh:path mhdbdbxml:prevSibling ;
+            sh:severity sh:Violation ],
+        [ sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:child,
+                mhdbdbxml:nextSibling,
+                mhdbdbxml:prevSibling ;
+            sh:maxCount 1 ;
+            sh:path mhdbdbxml:parent ;
+            sh:severity sh:Violation ],
+        [ sh:class mhdbdbxml:Document ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mhdbdbxml:partOf ;
+            sh:severity sh:Violation ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mhdbdbxml:index ;
+            sh:severity sh:Violation ] ;
+    sh:target mhdbdbxml:Node .
+
+mhdbdbxml:content a owl:DatatypeProperty ;
+    rdfs:label "Inhalt"@de,
+        "Content"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Text ;
+    rdfs:range xsd:string ;
+    skos:definition "Inhalt eines Text-Knotens."@de,
+        "Content of a text node."@en .
+
+mhdbdbxml:n a owl:DatatypeProperty ;
+    rdfs:label "n"@de,
+        "n"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-28" ;
+    dcterms:modified "2022-02-28+13:47" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range xsd:integer ;
+    skos:definition "Nummer des Elements im XML Baum."@de,
+        "Number of element in xml tree."@en .
+
+mhdbdbxml:xmlSource a owl:DatatypeProperty ;
+    rdfs:label "xml source"@de,
+        "xml source"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-28+13:47" ;
+    rdfs:domain mhdbdbxml:Document ;
+    rdfs:range xsd:string ;
+    skos:definition "xml source."@de,
+        "xml source."@en .
+
+mhdbdbxml:Comment a owl:Class ;
+    rdfs:label "Comment"@de,
+        "Comment"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:subClassOf mhdbdbxml:Node ;
+    skos:definition "Klasse des XML-Comments."@de,
+        "Class for XML Comment."@en .
+
+mhdbdbxml:Text a owl:Class ;
+    rdfs:label "Text"@de,
+        "Text"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:subClassOf mhdbdbxml:Node ;
+    skos:definition "Klasse des XML-Texts."@de,
+        "Class for XML Text."@en .
+
+mhdbdbxml:firstChild a owl:ObjectProperty ;
+    rdfs:label "hat ersten Kind-Knoten"@de,
+        "has firstChild node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:firstItem,
+        mhdbdbxml:child ;
+    skos:definition "Identifiziert den ersten Kind-Knoten."@de,
+        "Identifies the firstChild node."@en .
+
+mhdbdbxml:index a owl:DatatypeProperty ;
+    rdfs:label "index"@de,
+        "index"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf co:index ;
+    skos:definition "Index-Position des Knotens in der Liste."@de,
+        "Index position of node in list."@en .
+
+mhdbdbxml:lastChild a owl:ObjectProperty ;
+    rdfs:label "hat letzten Kind-Knoten"@de,
+        "has lastChild node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:lastItem,
+        mhdbdbxml:child ;
+    skos:definition "Identifiziert den letzten Kind-Knoten."@de,
+        "Identifies the lastChild node."@en .
+
+mhdbdbxml:name a owl:DatatypeProperty ;
+    rdfs:domain owl:unionOf .
+
+mhdbdbxml:nameSpace a owl:DatatypeProperty ;
+    rdfs:domain owl:unionOf .
+
+mhdbdbxml:partOf a owl:ObjectProperty ;
+    rdfs:label "Teil eines Dokuments"@de,
+        "part of document"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Document ;
+    skos:definition "Identifiziert das Dokument des Knotens."@de,
+        "Identifies document of the node."@en .
+
+mhdbdbxml:root a owl:ObjectProperty ;
+    rdfs:label "hat Wurzelelement"@de,
+        "has root element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Document ;
+    rdfs:range mhdbdbxml:Element ;
+    skos:definition "Identifiziert das Wurzelelement eines Dokuments."@de,
+        "Identifies the root element of a document."@en .
+
+mhdbdbxml:attribute a owl:ObjectProperty ;
+    rdfs:label "hat Attribut"@de,
+        "has attribute"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Attribute ;
+    skos:definition "Identifiziert Attribut."@de,
+        "Identifies the attribut."@en .
+
+mhdbdbxml:value a owl:DatatypeProperty ;
+    rdfs:label "xml attribute value"@de,
+        "xml attribute value"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:domain mhdbdbxml:Attribute ;
+    rdfs:range xsd:string ;
+    skos:definition "xml attribute value."@de,
+        "xml attribute value."@en .
+
+mhdbdbxml:Attribute a owl:Class ;
+    rdfs:label "Attribute"@de,
+        "Attribute"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    skos:definition "Klasse des XML-Attributes."@de,
+        "Class for XML Attribute."@en .
+
+mhdbdbxml:Document a owl:Class ;
+    rdfs:label "Dokument"@de,
+        "Document"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    skos:definition "Klasse des XML-Dokument."@de,
+        "Class for XML Document."@en .
+
+mhdbdbxml:child a owl:ObjectProperty ;
+    rdfs:label "hat Kind-Knoten"@de,
+        "has child element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:item ;
+    owl:inverseOf mhdbdbxml:parent ;
+    skos:definition "Identifiziert den Kind-Knoten."@de,
+        "Identifies the child node."@en .
+
+mhdbdbxml:nextSibling a owl:ObjectProperty ;
+    rdfs:label "hat nächsten Knoten"@de,
+        "has next node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:nextItem ;
+    owl:inverseOf mhdbdbxml:prevSibling ;
+    skos:definition "Identifiziert den nächsten Knoten."@de,
+        "Identifies the next node."@en .
+
+mhdbdbxml:parent a owl:ObjectProperty ;
+    rdfs:label "hat Eltern-Knoten"@de,
+        "has parent element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "2022-02-28+13:47" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Element ;
+    skos:definition "Identifiziert den Elternknoten."@de,
+        "Identifies the parent node."@en .
+
+mhdbdbxml:prevSibling a owl:ObjectProperty ;
+    rdfs:label "hat vorhergehenden Knoten"@de,
+        "has previous node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:subPropertyOf co:previousItem ;
+    owl:inverseOf mhdbdbxml:nextSibling ;
+    skos:definition "Identifiziert den vorhergehenden Knoten."@de,
+        "Identifies the previous node."@en .
+
+mhdbdbxml:Element a owl:Class ;
+    rdfs:label "Element"@de,
+        "Element"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-02-25+16:19" ;
+    rdfs:subClassOf mhdbdbxml:Node ;
+    skos:definition "Klasse des XML-Elements."@de,
+        "Class for XML Element."@en .
+
+mhdbdbxml:Node a owl:Class ;
+    rdfs:label "Knoten"@de,
+        "Node"@en ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "2022-03-14+15:41" ;
+    rdfs:subClassOf co:List,
+        co:ListItem ;
+    skos:definition "Klasse des XML-Knoten."@de,
+        "Class for XML Node."@en .
+

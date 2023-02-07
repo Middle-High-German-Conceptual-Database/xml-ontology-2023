@@ -1,0 +1,15 @@
+mhdbdbxml:index a owl:DatatypeProperty ;    
+    rdfs:domain  
+        mhdbdbxml:Node ;
+    rdfs:range xsd:integer ;
+    rdfs:label
+        "index"@en ,
+        "index"@de ;
+    skos:definition
+        "Index position of node in list of siblings."@en ,
+        "Index-Position des Knotens in der Liste der Geschwister."@de ;
+    rdfs:subPropertyOf co:index ;        
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

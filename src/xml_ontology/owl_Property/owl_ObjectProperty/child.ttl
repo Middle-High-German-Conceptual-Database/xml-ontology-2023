@@ -1,0 +1,15 @@
+mhdbdbxml:child a owl:ObjectProperty ;    
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    owl:inverseOf mhdbdbxml:parent ;
+    rdfs:label
+        "has child element"@en ,
+        "hat Kind-Knoten"@de ;
+    skos:definition
+        "Identifies the child node."@en ,
+        "Identifiziert den Kind-Knoten."@de ;
+    rdfs:subPropertyOf co:item ;        
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

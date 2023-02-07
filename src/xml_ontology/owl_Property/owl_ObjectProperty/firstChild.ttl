@@ -1,0 +1,15 @@
+mhdbdbxml:firstChild a owl:ObjectProperty ;    
+    rdfs:subPropertyOf mhdbdbxml:child ;
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Node ;
+    rdfs:label
+        "has firstChild node"@en ,
+        "hat ersten Kind-Knoten"@de ;
+    skos:definition
+        "Identifies the firstChild node."@en ,
+        "Identifiziert den ersten Kind-Knoten."@de ;
+    rdfs:subPropertyOf co:firstItem ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

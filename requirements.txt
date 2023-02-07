@@ -1,0 +1,16 @@
+certifi==2021.5.30
+charset-normalizer==2.0.5
+-e git+https://git.sbg.ac.at/dhplus/core/dhplus_python_tools@b01e148b18f780dca84b2a7c4348a6219a936563#egg=dhPLUS_data_model_tools
+gitdb==4.0.7
+GitPython==3.1.18
+idna==3.2
+isodate==0.6.0
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+pyparsing==2.4.7
+rdflib==6.0.0
+requests==2.26.0
+six==1.16.0
+smmap==4.0.0
+SPARQLWrapper==1.8.5
+urllib3==1.26.6

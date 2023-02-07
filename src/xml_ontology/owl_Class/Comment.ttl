@@ -1,0 +1,12 @@
+mhdbdbxml:Comment a owl:Class ;    
+    rdfs:label
+        "Comment"@en ,
+        "Comment"@de ;
+    rdfs:subClassOf mhdbdbxml:Node ;    
+    skos:definition
+        "Class for XML Comment."@en ,
+        "Klasse des XML-Comments."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

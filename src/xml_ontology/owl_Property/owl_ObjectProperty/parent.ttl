@@ -1,0 +1,13 @@
+mhdbdbxml:parent a owl:ObjectProperty ;    
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Element ;
+    rdfs:label
+        "has parent element"@en ,
+        "hat Eltern-Knoten"@de ;
+    skos:definition
+        "Identifies the parent node."@en ,
+        "Identifiziert den Elternknoten."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-25" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

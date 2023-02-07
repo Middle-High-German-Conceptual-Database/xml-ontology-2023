@@ -1,0 +1,12 @@
+mhdbdbxml:Node a owl:Class ;    
+    rdfs:label
+        "Node"@en ,
+        "Knoten"@de ;
+    skos:definition
+        "Class for XML Node."@en ,
+        "Klasse des XML-Knoten."@de ;
+    rdfs:subClassOf co:ListItem, co:List ; 
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

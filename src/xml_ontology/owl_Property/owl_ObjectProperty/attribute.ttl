@@ -1,0 +1,13 @@
+mhdbdbxml:attribute a owl:ObjectProperty ;    
+    rdfs:domain mhdbdbxml:Element ;
+    rdfs:range mhdbdbxml:Attribute ;
+    rdfs:label
+        "has attribute"@en ,
+        "hat Attribut"@de ;
+    skos:definition
+        "Identifies the attribut."@en ,
+        "Identifiziert Attribut."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

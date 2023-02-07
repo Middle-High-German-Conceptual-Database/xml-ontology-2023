@@ -1,0 +1,27 @@
+mhdbdbxml:ValidationAttribute a sh:NodeShape ;
+    sh:target mhdbdbxml:Attribute ;
+    sh:property [
+            sh:path mhdbdbxml:name ;
+            sh:datatype xsd:string ;
+            sh:severity sh:Violation ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+        ] ,
+        [
+            sh:path mhdbdbxml:nameSpace ;
+            sh:datatype xsd:string ;
+            sh:severity sh:Violation ;
+            sh:minCount 0 ;
+            sh:maxCount 1 ;
+        ] ,
+        [
+            sh:path mhdbdbxml:value ;
+            sh:datatype xsd:string ;
+            sh:severity sh:Violation ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+        ] ;      
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

@@ -1,0 +1,19 @@
+<https://dh.plus.ac.at/xml-ontology> a owl:Ontology ;
+    rdfs:label
+        "dhPLUS XML Ontology"@en ,
+        "dhPLUS XML Ontologie"@de ;
+    dc:title
+        "dhPLUS XML Ontology"@en ,
+        "dhPLUS XML Ontologie"@de ;
+    skos:definition
+            "This ontology specifies the TEI to RDF serialization used in MHDBDB."@en ,
+            "Diese Ontologie spezifiziert die TEI-zu-RDF-Serialisierung, die in MHDBDB verwendet wird."@de ;
+    owl:versionInfo "0.1"^^xsd:string, "2022-02-23"^^xsd:date ;
+    owl:ontologyIRI <https://dh.plus.ac.at/xml-ontology#> ;
+    owl:versionIRI <https://dh.plus.ac.at/xml-ontology/0-1#> ;
+    dc:rights <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dc:creator "Peter Hinkelmanns" ;
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+    owl:imports <http://purl.org/co/>
+.

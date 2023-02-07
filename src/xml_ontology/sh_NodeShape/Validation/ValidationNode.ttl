@@ -1,0 +1,39 @@
+mhdbdbxml:ValidationNode a sh:NodeShape ;
+    sh:target mhdbdbxml:Node ;
+    sh:property [
+            sh:path mhdbdbxml:nextSibling ;
+            sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:prevSibling, mhdbdbxml:parent, mhdbdbxml:child ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path mhdbdbxml:prevSibling ;
+            sh:class mhdbdbxml:Node ;
+            sh:disjoint mhdbdbxml:nextSibling, mhdbdbxml:parent, mhdbdbxml:child ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path mhdbdbxml:parent ;
+            sh:class mhdbdbxml:Node ;
+            sh:maxCount 1 ;
+            sh:disjoint mhdbdbxml:prevSibling, mhdbdbxml:nextSibling, mhdbdbxml:child ;
+            sh:severity sh:Violation ;
+        ] ,        
+        [
+            sh:path mhdbdbxml:partOf ;
+            sh:class mhdbdbxml:Document ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:path mhdbdbxml:index ;
+            sh:datatype xsd:integer ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:severity sh:Violation ;
+        ] ;    
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

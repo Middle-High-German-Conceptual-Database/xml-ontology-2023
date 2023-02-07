@@ -1,0 +1,15 @@
+mhdbdbxml:prevSibling a owl:ObjectProperty ;        
+    rdfs:domain mhdbdbxml:Node ;
+    rdfs:range mhdbdbxml:Node ;
+    owl:inverseOf mhdbdbxml:nextSibling ;
+    rdfs:label
+        "has previous node"@en ,
+        "hat vorhergehenden Knoten"@de ;
+    skos:definition
+        "Identifies the previous node."@en ,
+        "Identifiziert den vorhergehenden Knoten."@de ;
+    rdfs:subPropertyOf co:previousItem ;        
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-24" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.

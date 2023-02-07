@@ -1,0 +1,13 @@
+mhdbdbxml:root a owl:ObjectProperty ;    
+    rdfs:domain mhdbdbxml:Document ;
+    rdfs:range mhdbdbxml:Element ;
+    rdfs:label
+        "has root element"@en ,
+        "hat Wurzelelement"@de ;
+    skos:definition
+        "Identifies the root element of a document."@en ,
+        "Identifiziert das Wurzelelement eines Dokuments."@de ;
+    dc:creator "Peter Hinkelmanns" ;    
+    dcterms:created "2022-02-23" ;
+    dcterms:modified "{{ modificationDate }}" ;
+.
