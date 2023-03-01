@@ -1,6 +1,6 @@
 # MHDBDB XML Ontology
 
-This directory contains all sources of the dhPLUS XML Ontology. 
+This directory contains all sources of the MHDBDB XML Ontology. 
 
 ## Template Usage
 
